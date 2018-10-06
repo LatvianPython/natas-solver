@@ -3,8 +3,9 @@ import json
 
 def save_credentials(level, password):
     username = 'natas{}'.format(level)
-    if level is not str:
-        level = str(level)
+    level = str(level)
+    if password is None:
+        return
     with open('credentials.json', 'r+', encoding='utf-8') as file:
         raw_data = file.read()
         data = json.loads(raw_data)
@@ -16,8 +17,7 @@ def save_credentials(level, password):
 
 
 def get_credentials(level):
-    if level is not str:
-        level = str(level)
+    level = str(level)
     with open('credentials.json', 'r', encoding='utf-8') as file:
         raw_data = file.read()
         data = json.loads(raw_data)
