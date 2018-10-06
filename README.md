@@ -1,4 +1,4 @@
 # natas-solver
-Scripts that solve the "natas" wargames
+Scripts that solve the "natas" wargame
 
 http://overthewire.org/wargames/natas/
